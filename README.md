@@ -8,7 +8,7 @@ Este proyecto es una Single Page Application (SPA) sencilla hecha con **HTML, CS
 
 La página web está actualmente disponible desplegada con github pages. Puede verse su contenido en el siguiente link:
 ```
-    http://127.0.0.1:5500/
+    https://paucode.com/Pop-It-Web/
 ```
 
 ### 🔹 Opción 2: Ver en Local  
