@@ -1,29 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi SPA</title>
+    <title>Pop It!</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="assets/icon/apple-touch-icon.png">
+
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+
     <script defer src="script.js"></script>
 </head>
+
 <body>
     <header class="header">
         <nav class="header__nav">
-            <ul class="header__list">
-                <li class="header__item"><a href="#" class="header__link" data-page="home">Inicio</a></li>
-                <li class="header__item"><a href="#" class="header__link" data-page="about">Acerca</a></li>
-                <li class="header__item"><a href="#" class="header__link" data-page="contact">Contacto</a></li>
+            <div class="header__item"><a href="#" class="header__link" data-page="home">NE_PUPPYRKA.RU</a></div>
+
+            <button class="header__menu-btn" aria-label="Open menu" id="burger_btn">
+                ☰
+            </button>
+
+            <ul class="header__list" id="burger_menu">
+                <button class="header__menu-btn" aria-label="Open menu" id="burger_btn--close">
+                    x
+                </button>
+
+                <li class="header__item"><a href="#" class="header__link" data-page="not_found">Acerca de</a></li>
+                <li class="header__item"><a href="#" class="header__link" data-page="not_found">Descuentos</a></li>
+                <li class="header__item"><a href="#" class="header__link" data-page="not_found">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="content" id="content">
-        <!-- Aquí se cargará dinámicamente el contenido -->
+        <!-- Dynamic content will be rendered here (see script.js - navigation)-->
     </main>
 
     <footer class="footer">
-        <p class="footer__text">© 2025 Mi SPA</p>
+        <nav class="footer__nav">
+            <ul class="footer__list" id="burger_menu">
+                <li class="footer__item--home"><a href="#" class="footer__link" data-page="home">NE_PUPPYRKA.RU</a></li>
+                <li><a href="#" class="footer__link" data-page="not_found">Formas de Pago</a></li>
+                <li><a href="#" class="footer__link" data-page="not_found">Entrega</a></li>
+                <li><a href="#" class="footer__link" data-page="not_found">Venta al Por Mayor</a></li>
+                <li><a href="#" class="footer__link" data-page="not_found">Contacto</a></li>
+            </ul>
+        </nav>
+        <p class="footer__copyright">© 2025 Pop It! - Paula Daniela Guzmán Zabala</p>
     </footer>
 </body>
+
 </html>

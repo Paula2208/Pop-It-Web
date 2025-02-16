@@ -1,60 +1,220 @@
+/* Other Styles */
+@import url('./styles/home.css');
+@import url('./styles/not_found.css');
+@import url('./styles/animations.css');
+
 /* Variables */
 :root {
-    --primary-color: #3498db;
-    --text-color: #333;
     --bg-color: #f4f4f4;
+    --bg-footer: #333333;
+
+    --primary-color: #febf69;
+    --primary-light: #fee0b8;
+    --primary-dark: #fd7f1f;
+    --secondary-color: #fc2e20;
+    --accent-color: #cbf3f0;
+    --accent-dark: #007b71;
+
+    --text-color: #333;
+    --dark: #000000;
+    --light: #FFFFFF;
+    --font-base: 'Nunito Sans', sans-serif;
+
+    --padding-base: 2em 6em;
+    --padding-base-mobile: 1em;
+
+    --padding-footer: 2em 6em 0.5em 6em;
+    --padding-footer-mobile: 1em;
+
+    --padding-section: 1em 6em;
+    --padding-section-mobile: 2em 1em;
 }
 
-/* Estilos base */
+/* Base */
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-base);
     color: var(--text-color);
     background: var(--bg-color);
     margin: 0;
     padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+h1, h2, p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    line-height: 1em;
 }
 
 /* Header */
 .header {
-    background: var(--primary-color);
-    padding: 1rem;
+    background: transparent;
+    padding: var(--padding-base);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    opacity: 1;
+    transition: 
+        opacity 0.8s ease-in-out,
+        transform 0.3s ease-in-out;
+
+    z-index: 20000;
+}
+
+.header--hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.header__menu-btn {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
 }
 
 .header__nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header__list {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 4em;
     padding: 0;
     margin: 0;
 }
 
-.header__item {}
-
 .header__link {
     text-decoration: none;
-    color: white;
-    font-weight: bold;
+    color: var(--dark);
+    text-transform: uppercase;
 }
 
 .header__link:hover {
     text-decoration: underline;
 }
 
-/* Contenido */
+@media (max-width: 795px) {
+
+    .header {
+        padding: var(--padding-base-mobile);
+    }
+
+    .header__menu-btn {
+        display: flex;
+        color: var(--dark);
+    }
+
+    .header__list {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        align-items: flex-end;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        background-color: var(--primary-dark);
+        min-width: 20vw;
+        padding: 2.5em 2em;
+        border-bottom-left-radius: 18px;
+        transform: translateX(100%);
+
+        z-index: 200000001;
+
+        opacity: 0;
+        transition: 
+            opacity 0.5s ease-in-out,
+            transform 0.3s ease-in-out;
+    }
+
+    .header__link {
+        font-weight: bold;
+    }
+
+    .header__list--open {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+/* Content */
 .content {
-    padding: 2rem;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    min-width: 100vw;
+    box-sizing: border-box;
 }
 
 /* Footer */
 .footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 1rem;
+    background: var(--bg-footer);
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    color: var(--light);
+    gap: 2em;
+
+    text-align: Left;
+    padding: var(--padding-footer);
+}
+
+.footer__copyright{
+    font-size: 0.7em;
+}
+
+.footer__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 2em;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.footer__item--home > a{
+    font-weight: bold;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: var(--light);
+    word-break: keep-all;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 795px) {
+    .footer {
+        padding: var(--padding-footer-mobile);
+    }
 }

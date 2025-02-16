@@ -1,4 +1,66 @@
 <section class="home">
-    <h1 class="home__title">Bienvenido a Mi SPA</h1>
-    <p class="home__text">Esta es una página de una sola vista hecha con HTML, CSS y JavaScript puro.</p>
+    <section class="home__banner">
+        <div class="home__banner-info">
+            <div class="home__banner-info-text">
+                <h1 class="home__banner-info-text-title">Pop it!</h1>
+                <p class="home__banner-info-text-subtitle">El mejor juguete antiestrés - ¡Burbujas infinitas!</p>
+            </div>
+
+            <button class="home__banner-info-button">Comprar</button>
+        </div>
+        <div class="home__banner-image">
+            <img src="assets/popit_home.png" alt="Ice-cream Pop it" class="home__banner-image-animated" />
+            <div class="home__banner-image-oval">&nbsp;</div>
+        </div>
+    </section>
+
+    <section class="home__whats">
+        <h2 class="home__whats-title">¿Qué es Pop it?</h2>
+        <p class="home__whats-text">
+            Pop it significa literalmente «estallar».
+            Se trata de un juego infantil cuyo proceso puede compararse al de reventar plástico de burbujas.
+            Pero a diferencia del plástico de burbujas, Pop it se puede apretar con las sensaciones y sonidos
+            característicos «sin fin»:
+            basta con apretar decenas de burbujas de silicona en la otra dirección.
+        </p>
+    </section>
+
+    <section class="home__product_slider">
+        <h2 class="home__product_slider-title">¡Elije tu Pop It!</h2>
+
+        <div class="home__product-slider-container">
+            <button
+                class="home__product-slider-arrow left"
+                id="Product_Slider_btn-left"
+            >
+                &lt;
+            </button>
+
+            <div class="home__product-slider-wrapper">
+                <div class="home__product-slider" id="product_slider">
+                    <!-- Products will be rendered here-->
+                </div>
+            </div>
+            
+            <button
+                class="home__product-slider-arrow right"
+                id="Product_Slider_btn-right"
+            >
+                &gt;
+            </button>
+        </div>
+    </section>
+
+    <section class="home__how">
+        <div class="home__how-info">
+            <h2 class="home__how-info-title">Reglas de Juego</h2>
+            <p class="home__how-info-text">
+                Los jugadores se turnan para dar vueltas y pulsar los botones. 
+                Es necesario terminar la fila iniciada. 
+                Puedes pulsar un máximo de 3 reventadores al mismo tiempo (deben estar uno al lado del otro, no puedes pulsar varios reventadores a la vez, a menos que estén cerca el uno del otro). 
+                El objetivo es hacer que el oponente llegue el último. El que salga último, pierde.
+            </p>
+        </div>
+        <img src="assets/photo.jpg" alt="Boy playing with a pop it square" class="home__how-image" />
+    </section>
 </section>

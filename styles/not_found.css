@@ -1,0 +1,46 @@
+.not_found {
+    background-color: var(--light);
+    background-image: url("../assets/bg-grid2.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; 
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 7vw;
+    padding: 5em 6em;
+    width: 100vw;
+    height: 100vh;
+
+    color: var(--dark);
+    text-align: center;
+}
+
+.not_found-title {
+    font-weight: 900;
+    font-size: 4vw;
+}
+
+.not_found-text {
+    line-height: 1.5em;
+    font-weight: 100;
+    color: var(--text-color);
+    font-size: 2vw;
+}
+
+@media (max-width: 795px) {
+    .not_found {
+        padding: 5em 1em;
+        background-size: cover;
+        gap: 26vw;
+    }
+
+    .not_found-title {
+        font-size: 14vw;
+    }
+    
+    .not_found-text {
+        font-size: 10vw;
+    }
+}

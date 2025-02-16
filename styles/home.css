@@ -1,0 +1,366 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Home Banner */
+.home__banner {
+    min-height: 85vh;
+    background-color: var(--primary-color);
+    animation: backgroundAnimation 7s infinite linear;
+    display: flex;
+    padding: var(--padding-section);
+    gap: 7vw;
+}
+
+.home__banner-info {
+    display: flex;
+    flex-direction: column;
+    gap: 7vh;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.home__banner-info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.home__banner-info-text-title {
+    font-size: 11vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--light);
+    line-height: normal;
+}
+
+.home__banner-info-text-subtitle {
+    font-size: 1.6vw;
+    font-weight: 700;
+    color: var(--light);
+}
+
+.home__banner-info-button {
+    background-color: var(--accent-color);
+    color: var(--dark);
+    padding: 0.7em 2em;
+    border: 0;
+    font-size: 1.8vw;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.home__banner-info-button:hover {
+    background-color: var(--primary-dark);
+    color: var(--light);
+}
+
+.home__banner-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.home__banner-image-oval {
+    width: 45vw;
+    height: 24vw;
+    background-color: var(--primary-light);
+    border-radius: 50%;
+    transform: rotate(146deg);
+    z-index: 0;
+    position: absolute;
+    top: 17vw;
+    left: -9vw;
+    animation: backgroundOvalAnimation 7s infinite linear;
+}
+
+.home__banner-image-animated {
+    z-index: 1;
+    width: 23vw;
+    animation: flipAnimation 3s infinite linear;
+}
+
+@media (max-width: 795px) {
+    .home__banner {
+        flex-direction: column;
+        min-height: 100%;
+        padding: var(--padding-section-mobile);
+        padding-top: 5em;
+    }
+
+    .home__banner-info-text {
+        align-items: center;
+    }
+
+    .home__banner-info-text-title {
+        font-size: 19vw;
+    }
+
+    .home__banner-info {
+        align-items: center;
+        gap: 2em;
+    }
+
+    .home__banner-info-text-subtitle {
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    .home__banner-info-button {
+        font-size: 5.2vw;
+    }
+
+    .home__banner-image-animated {
+        width: 48vw;
+    }
+
+    .home__banner-image-oval {
+        width: 97vw;
+        height: 46vw;
+        top: auto;
+        left: auto;
+    }
+
+}
+
+/* What's pop it */
+
+.home__whats {
+    display: flex;
+    flex-direction: column;
+    padding: 7em 20vw;
+
+    gap: 2vw;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--dark);
+    text-align: center;
+}
+
+.home__whats-title {
+    font-weight: 900;
+}
+
+.home__whats-text {
+    line-height: 1.5em;
+    font-weight: 100;
+    color: var(--text-color);
+    font-size: 1.4vw;
+}
+
+@media (max-width: 795px) {
+    .home__whats {
+        padding: 5em 1em;
+        gap: 10vw;
+    }
+
+    .home__whats-text {
+        font-size: 4.5vw;
+    }
+}
+
+/* Product slider */
+
+.home__product_slider {
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+
+    justify-content: center;
+    align-items: center;
+
+    color: var(--dark);
+
+    min-height: 20vh;
+    background-color: var(--accent-color);
+
+    padding: 5em 6em;
+}
+
+.home__product-slider-container {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    gap: 1vw;
+}
+
+.home__product_slider-title {
+    font-weight: 900;
+}
+
+.home__product-slider-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    width: 100%;
+}
+
+.home__product-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 5vw;
+}
+
+.home__product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 22vw;
+    text-align: center;
+    gap: 2em;
+    border-radius: 10px;
+}
+
+.home__product-buy-btn {
+    background-color: var(--primary-color);
+    color: var(--dark);
+    padding: 0.7em 1em;
+    border: 0;
+    font-size: 1.3vw;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.home__product-buy-btn:hover {
+    background-color: var(--primary-dark);
+    color: var(--light);
+}
+
+.home__product-name {
+    font-weight: 500;
+    font-size: 1.3vw;
+}
+
+.home__product-img {
+    width: 11vw;
+    height: 11vw;
+    object-fit: contain;
+}
+
+.home__product-slider-arrow {
+    background-color: transparent;
+    color: var(--accent-dark);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.home__product-slider-arrow:hover {
+    color: var(--text-color);
+}
+
+.home__product-slider-arrow.left {
+    left: 10px;
+}
+
+.home__product-slider-arrow.right {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .home__product {
+        width: 64vw;
+    }
+
+    .home__product-img {
+        width: 45vw;
+        height: 45vw;
+    }
+
+    .home__product-name {
+        font-size: 6vw;
+    }
+
+    .home__product-buy-btn {
+        font-size: 6vw;
+    }
+}
+
+@media (max-width: 795px) {
+    .home__product_slider {
+        padding: 3em 1em;
+    }
+
+    .home__product_slider {
+        gap: 7vw;
+    }
+}
+
+/* How */
+
+.home__how {
+    background-color: var(--light);
+    background-image: url("../assets/bg-grid.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 7vw;
+    padding: 5em 6em;
+}
+
+.home__how-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    justify-content: center;
+    align-items: flex-start;
+
+    color: var(--dark);
+    text-align: left;
+}
+
+.home__how-image {
+    width: 32vw;
+    flex: 1;
+}
+
+.home__how-info-title {
+    font-weight: 900;
+}
+
+.home__how-info-text {
+    line-height: 1.3em;
+    font-weight: 100;
+    color: var(--text-color);
+    font-size: 1.3vw;
+}
+
+@media (max-width: 795px) {
+    .home__how {
+        padding: 5em 1em;
+        gap: 10vw;
+        flex-direction: column;
+        background-size: cover;
+    }
+
+    .home__how-info {
+        gap: 7vw;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .home__how-info-text {
+        font-size: 4.5vw;
+    }
+
+    .home__how-image {
+        width: 82vw;
+    }
+}
